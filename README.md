@@ -96,12 +96,14 @@ finsh >
 
 ## 6. 联系人信息
 
-维护人：xuzhuoyi < xzy476386434@vip.qq.com >
+维护人： < wwwsky999@hotmail.com >
 
 ## 7. 参考
 
 * [C2000 Delfino MCU F28377D LaunchPad 开发套件][1]
 * TMS320F28377D [相关技术文档][2]
+* RT-Thread
+<https://github.com/RT-Thread/rt-thread/blob/master/README_zh.md>
 
   [1]: http://www.ti.com.cn/tool/cn/launchxl-f28377d
   [2]: http://www.ti.com.cn/product/cn/tms320f28377d/technicaldocuments
