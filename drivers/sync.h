@@ -165,8 +165,8 @@ inline static void __mem_fence_release() {
  */
 inline static uint32_t save_and_disable_interrupts() {
     uint32_t status;
-/*    __asm volatile (" mrs %0, PRIMASK" : "=r" (status)::);
-    __asm volatile (" cpsid i");*/
+    //__asm volatile (" mrs %0, PRIMASK" : "=r" (status)::);
+   // __asm volatile (" cpsid i");
     return status;
 }
 
@@ -176,7 +176,7 @@ inline static uint32_t save_and_disable_interrupts() {
  * \param status Previous interrupt status from save_and_disable_interrupts()
   */
 inline static void restore_interrupts(uint32_t status) {
-    // __asm volatile (" msr PRIMASK,%0"::"r" (status) : );
+     //__asm volatile (" msr PRIMASK,%0"::"r" (status) : );
 }
 
 /*! \brief Get HW Spinlock instance from number
