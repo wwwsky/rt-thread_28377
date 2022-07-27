@@ -52,7 +52,7 @@ int msh_help(int argc, char **argv)
 
     return 0;
 }
-//MSH_CMD_EXPORT_ALIAS(msh_help, help, RT-Thread shell help.);
+MSH_CMD_EXPORT_ALIAS(msh_help, help, RT-Thread shell help.);
 
 #ifdef MSH_USING_BUILT_IN_COMMANDS
 int cmd_ps(int argc, char **argv)
@@ -68,7 +68,7 @@ int cmd_ps(int argc, char **argv)
         list_thread();
     return 0;
 }
-//MSH_CMD_EXPORT_ALIAS(cmd_ps, ps, List threads in the system.);
+MSH_CMD_EXPORT_ALIAS(cmd_ps, ps, List threads in the system.);
 
 #ifdef RT_USING_HEAP
 int cmd_free(int argc, char **argv)
@@ -81,7 +81,7 @@ int cmd_free(int argc, char **argv)
     rt_kprintf("maximum : %d\n", max_used);
     return 0;
 }
-//MSH_CMD_EXPORT_ALIAS(cmd_free, free, Show the memory usage in the system.);
+MSH_CMD_EXPORT_ALIAS(cmd_free, free, Show the memory usage in the system.);
 #endif /* RT_USING_HEAP */
 #endif /* MSH_USING_BUILT_IN_COMMANDS */
 

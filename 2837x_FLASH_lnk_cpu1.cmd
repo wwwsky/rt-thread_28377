@@ -104,8 +104,22 @@ SECTIONS
    /* Initalized sections go in Flash */
    .econst             : >> FLASHF | FLASHG | FLASHH      PAGE = 0, ALIGN(4)
    .switch             : > FLASHB      PAGE = 0, ALIGN(4)
-
+    FSymTab            : >   FLASHE      PAGE = 0, ALIGN(4)
    .reset              : > RESET,     PAGE = 0, TYPE = DSECT /* not used, */
+
+       .text :
+       {/* section information for finsh shell */
+		. = ALIGN(4);
+        __fsymtab_start = .;
+
+        __fsymtab_end = .;
+        . = ALIGN(4);
+        __vsymtab_start = .;
+
+        __vsymtab_end = .;
+        . = ALIGN(4);
+
+        }
 
    Filter_RegsFile     : > RAMGS0,	   PAGE = 1
    

@@ -62,8 +62,7 @@ struct finsh_syscall *finsh_syscall_next(struct finsh_syscall *call)
 }
 
 #endif /* defined(_MSC_VER) || (defined(__GNUC__) && defined(__x86_64__)) */
- struct finsh_syscall_item *global_syscall_list;
- struct finsh_syscall *_syscall_table_begin, *_syscall_table_end;
+
 #ifdef RT_USING_HEAP
 int finsh_set_prompt(const char *prompt)
 {
@@ -723,6 +722,7 @@ __declspec(allocate("FSymTab$z")) const struct finsh_syscall __fsym_end =
 };
 #endif
 
+
 /*
  * @ingroup finsh
  *
@@ -743,8 +743,8 @@ int finsh_system_init(void)
                                __section_end("FSymTab"));
 #elif defined (__GNUC__) || defined(__TI_COMPILER_VERSION__) || defined(__TASKING__)
     /* GNU GCC Compiler and TI CCS */
-    extern const int __fsymtab_start;
-    extern const int __fsymtab_end;
+    /*extern const*/ int __fsymtab_start;
+    /*extern const*/ int __fsymtab_end;
     finsh_system_function_init(&__fsymtab_start, &__fsymtab_end);
 #elif defined(__ADSPBLACKFIN__) /* for VisualDSP++ Compiler */
     finsh_system_function_init(&__fsymtab_start, &__fsymtab_end);

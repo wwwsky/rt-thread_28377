@@ -61,6 +61,7 @@
 
 #define RT_USING_FINSH
 #define RT_USING_MSH
+#define FINSH_USING_SYMTAB
 #define FINSH_USING_MSH
 #define FINSH_THREAD_NAME "tshell"
 #define FINSH_THREAD_PRIORITY 6

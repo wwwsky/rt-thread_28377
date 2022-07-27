@@ -195,7 +195,7 @@ int rt_hw_sci_init(void)
 {
     EALLOW;
 
-    GpioCtrlRegs.GPBMUX1.bit.GPIO42 = 3;
+/*    GpioCtrlRegs.GPBMUX1.bit.GPIO42 = 3;
     GpioCtrlRegs.GPBMUX1.bit.GPIO43 = 3;
     GpioCtrlRegs.GPBGMUX1.bit.GPIO42 = 3;
     GpioCtrlRegs.GPBGMUX1.bit.GPIO43 = 3;
@@ -208,7 +208,22 @@ int rt_hw_sci_init(void)
     GpioCtrlRegs.GPBMUX2.bit.GPIO56 = 2;
     GpioCtrlRegs.GPEMUX1.bit.GPIO139 = 2;
     GpioCtrlRegs.GPBGMUX2.bit.GPIO56 = 1;
-    GpioCtrlRegs.GPEGMUX1.bit.GPIO139 = 1;
+    GpioCtrlRegs.GPEGMUX1.bit.GPIO139 = 1;*/
+    /*scia28377*/
+    GpioCtrlRegs.GPCMUX1.bit.GPIO64 = 2;
+    GpioCtrlRegs.GPCMUX1.bit.GPIO65 = 2;
+    GpioCtrlRegs.GPCGMUX1.bit.GPIO64 = 1;
+    GpioCtrlRegs.GPCGMUX1.bit.GPIO65 = 1;
+    /*scib28377*/
+    GpioCtrlRegs.GPBGMUX2.bit.GPIO54 = 1;
+    GpioCtrlRegs.GPBGMUX2.bit.GPIO55 = 1;
+    GpioCtrlRegs.GPBMUX2.bit.GPIO54  = 2;
+    GpioCtrlRegs.GPBMUX2.bit.GPIO55  = 2;
+    /*scic28377*/
+    GpioCtrlRegs.GPBGMUX2.bit.GPIO56 = 1;
+    GpioCtrlRegs.GPBGMUX2.bit.GPIO57 = 1;
+    GpioCtrlRegs.GPBMUX2.bit.GPIO56  = 2;
+    GpioCtrlRegs.GPBMUX2.bit.GPIO57  = 2;
 
     CpuSysRegs.PCLKCR7.bit.SCI_A = 1;
     CpuSysRegs.PCLKCR7.bit.SCI_B = 1;

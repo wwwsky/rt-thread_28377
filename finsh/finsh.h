@@ -95,6 +95,8 @@ typedef long (*syscall_func)(void);
 #endif /* end of FINSH_USING_DESCRIPTION */
 #endif /* end of FINSH_USING_SYMTAB */
 
+
+
 /**
  * @ingroup finsh
  *

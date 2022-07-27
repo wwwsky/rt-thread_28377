@@ -48,6 +48,22 @@ void rt_hw_board_init()
     /* Configure the system clock @ 84 Mhz */
     InitSysCtrl();
 
+#ifdef _STANDALONE
+#ifdef _FLASH
+// Send boot command to allow the CPU2 application to begin execution
+IPCBootCPU2(C1C2_BROM_BOOTMODE_BOOT_FROM_FLASH);
+#else
+// Send boot command to allow the CPU2 application to begin execution
+IPCBootCPU2(C1C2_BROM_BOOTMODE_BOOT_FROM_RAM);
+#endif
+#endif
+
+// Call Flash Initialization to setup flash waitstates
+// This function must reside in RAM
+#ifdef _FLASH
+   InitFlash();
+#endif
+
     DINT;
     InitPieCtrl();
 

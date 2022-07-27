@@ -46,7 +46,7 @@ static long clear(void)
 
     return 0;
 }
-//MSH_CMD_EXPORT(clear, clear the terminal screen);
+MSH_CMD_EXPORT(clear, clear the terminal screen);
 
 extern void rt_show_version(void);
 long version(void)
@@ -55,7 +55,7 @@ long version(void)
 
     return 0;
 }
-//MSH_CMD_EXPORT(version, show RT-Thread version information);
+MSH_CMD_EXPORT(version, show RT-Thread version information);
 
 rt_inline void object_split(int len)
 {
@@ -247,7 +247,7 @@ long list_thread(void)
 
     return 0;
 }
-//MSH_CMD_EXPORT(list_thread, list thread);
+MSH_CMD_EXPORT(list_thread, list thread);
 
 static void show_wait_queue(struct rt_list_node *list)
 {
@@ -328,7 +328,7 @@ long list_sem(void)
 
     return 0;
 }
-//MSH_CMD_EXPORT(list_sem, list semaphore in system);
+MSH_CMD_EXPORT(list_sem, list semaphore in system);
 #endif
 
 #ifdef RT_USING_EVENT
@@ -393,7 +393,7 @@ long list_event(void)
 
     return 0;
 }
-//MSH_CMD_EXPORT(list_event, list event in system);
+MSH_CMD_EXPORT(list_event, list event in system);
 #endif
 
 #ifdef RT_USING_MUTEX
@@ -451,7 +451,7 @@ long list_mutex(void)
 
     return 0;
 }
-//MSH_CMD_EXPORT(list_mutex, list mutex in system);
+MSH_CMD_EXPORT(list_mutex, list mutex in system);
 #endif
 
 #ifdef RT_USING_MAILBOX
@@ -522,7 +522,7 @@ long list_mailbox(void)
 
     return 0;
 }
-//MSH_CMD_EXPORT(list_mailbox, list mail box in system);
+MSH_CMD_EXPORT(list_mailbox, list mail box in system);
 #endif
 
 #ifdef RT_USING_MESSAGEQUEUE
@@ -589,7 +589,7 @@ long list_msgqueue(void)
 
     return 0;
 }
-//MSH_CMD_EXPORT(list_msgqueue, list message queue in system);
+MSH_CMD_EXPORT(list_msgqueue, list message queue in system);
 #endif
 
 #ifdef RT_USING_MEMHEAP
@@ -726,7 +726,7 @@ long list_mempool(void)
 
     return 0;
 }
-//MSH_CMD_EXPORT(list_mempool, list memory pool in system);
+MSH_CMD_EXPORT(list_mempool, list memory pool in system);
 #endif
 
 long list_timer(void)
@@ -790,7 +790,7 @@ long list_timer(void)
 
     return 0;
 }
-//MSH_CMD_EXPORT(list_timer, list timer in system);
+MSH_CMD_EXPORT(list_timer, list timer in system);
 
 #ifdef RT_USING_DEVICE
 static char *const device_type_str[] =
@@ -875,7 +875,7 @@ long list_device(void)
 
     return 0;
 }
-//MSH_CMD_EXPORT(list_device, list device in system);
+MSH_CMD_EXPORT(list_device, list device in system);
 #endif
 
 #endif /* RT_USING_FINSH */
